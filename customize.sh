@@ -155,17 +155,6 @@ if [ "`grep_prop dolby.mod $OPTIONALS`" != 1 ]; then
   ui_print " "
 fi
 
-# check
-FILE=/bin/hw/vendor.dolby.media.c2@1.0-service
-if [ -f $SYSTEM$FILE ] || [ -f $VENDOR$FILE ]\
-|| [ -f $ODM$FILE ] || [ -f $SYSTEM_EXT$FILE ]\
-|| [ -f $PRODUCT$FILE ]; then
-  ui_print "! This module maybe conflicting with your"
-  ui_print "  $FILE"
-  ui_print "  causes your internal storage mount failure"
-  ui_print " "
-fi
-
 # function
 check_function_2() {
 if [ -f $MODPATH/system_support$DIR/$LIB ]; then
