@@ -11,10 +11,10 @@ API=`getprop ro.build.version.sdk`
 # property
 resetprop -n ro.audio.ignore_effects false
 resetprop -n ro.vendor.dolby.dax.version DAX3_3.7.0.8_r1
-resetprop -n ro.product.brand Sony
-resetprop -n ro.product.manufacturer Sony
-resetprop -n ro.product.vendor_dlkm.name pdx237
-resetprop -n ro.product.vendor_dlkm.model Pdx237
+#resetprop -n ro.product.brand Sony
+#resetprop -n ro.product.manufacturer Sony
+#resetprop -n ro.product.vendor_dlkm.name pdx237
+#resetprop -n ro.product.vendor_dlkm.model Pdx237
 resetprop -n ro.dolby.mod_uuid false
 resetprop -n ro.dolby.music_stream false
 resetprop -n vendor.audio.dolby.ds2.enabled false

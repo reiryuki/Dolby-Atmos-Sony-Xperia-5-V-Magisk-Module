@@ -6,13 +6,14 @@
 
 ## Descriptions
 - Equalizer sound effect ported from Sony Xperia 5 V (pdx237) and integrated as a Magisk Module for all supported and rooted devices with Magisk
-- Changes/spoofs ro.product.brand to Sony, ro.product.manufacturer to Sony, ro.product.vendor_dlkm.name to pdx237, & ro.product.vendor_dlkm.model to Pdx237 which may break some system apps and features functionality
 - Global type sound effect
 - Conflicted with `vendor.dolby_v3_6.hardware.dms360@2.0-service`, `vendor.dolby_sp.hardware.dmssp@2.0-service`, & `vendor.dolby.hardware.dms@1.0-service`
-- I will not porting 360 Reality Audio, 360 Upmix, DSEE Ultimate, and Intelligent Wind Filter because they requires Xperia Audio Hal support which only available on Xperia ROM
+- I will not porting 360 Reality Audio, DSEE Ultimate, and Intelligent Wind Filter because they requires Xperia Audio Hal support which only available on Xperia ROM
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/sony/pdx237 sssi-user-14-67.1.A.2.229-1-release-keys
+- /lib64/soundfx/libswdap.so: https://github.com/XperiaLabs/vendor_sony_extra/tree/UDC/Sagami/audio
+- /lib/soundfx/libswdap.so modified by bbn
 - libstagefright_foundation.so, libstagefrightdolby.so, libstagefright_soft_ddpdec.so, libstagefright_soft_ac4dec.so, libdeccfg.so, & media_codecs_dolby_audio.xml: https://dumps.tadiphone.dev/dumps/motorola/rhode user-12-S1SR32.38-124-3-a8403-release-keys
 - libhidlbase.so: CrDroid ROM Android 13
 - libmagiskpolicy.so: Kitsune Mask R6687BB53

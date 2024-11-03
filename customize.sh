@@ -116,8 +116,6 @@ ODM=`realpath $MIRROR/odm`
 MY_PRODUCT=`realpath $MIRROR/my_product`
 
 # create
-mkdir -p $MODPATH/system/lib
-mkdir -p $MODPATH/system/lib64
 mkdir -p $MODPATH/system/etc/vintf
 NAMES="vendor.dolby.hardware.dms@1.0-service
        vendor.dolby_sp.hardware.dmssp@2.0-service
@@ -139,6 +137,23 @@ for NAME in $NAMES; do
     touch $MODPATH/system/vendor/odm/bin/hw/$NAME
   fi
 done
+
+# check
+if [ "`grep_prop dolby.mod $OPTIONALS`" != 1 ]; then
+  ui_print "- Checking in-built Dolby apps..."
+  FILE=`find /system/app /system/priv-app /product/app\
+        /product/priv-app /product/preinstall /system_ext/app\
+        /system_ext/priv-app /vendor/app /vendor/euclid/product/app\
+        -type f -name XiaomyDolby.apk -o -name DolbyManager.apk`
+  if [ "$FILE" ]; then
+    ui_print "  Detected"
+    ui_print "$FILE"
+    ui_print "  You need to use dolby.mod=1 to use this module,"
+    ui_print "  otherwise this module will not work. Please check"
+    ui_print "  Optionals at README."
+  fi
+  ui_print " "
+fi
 
 # check
 FILE=/bin/hw/vendor.dolby.media.c2@1.0-service
