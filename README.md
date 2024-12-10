@@ -8,7 +8,7 @@
 - Equalizer sound effect ported from Sony Xperia 5 V (pdx237) and integrated as a Magisk Module for all supported and rooted devices with Magisk
 - Global type sound effect
 - Conflicted with `vendor.dolby_v3_6.hardware.dms360@2.0-service`, `vendor.dolby_sp.hardware.dmssp@2.0-service`, & `vendor.dolby.hardware.dms@1.0-service`
-- I will not porting 360 Reality Audio, DSEE Ultimate, and Intelligent Wind Filter because they requires Xperia Audio Hal support which only available on Xperia ROM
+- I will not porting DSEE Ultimate and Intelligent Wind Filter because they requires Xperia Audio Hal support which only available on Xperia ROM
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/sony/pdx237 sssi-user-14-67.1.A.2.229-1-release-keys
@@ -61,6 +61,7 @@
 - https://t.me/viperatmos
 - https://t.me/androidryukimodsdiscussions
 - @HELLBOY017
+- @ahnet_h & bbn
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Sponsors

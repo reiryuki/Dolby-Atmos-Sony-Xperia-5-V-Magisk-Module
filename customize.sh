@@ -853,23 +853,25 @@ fi
 }
 
 # mod
-NAME=libhidlbase.so
-NAME2=libhidldlbs.so
-if [ "$IS64BIT" == true ]; then
-  FILE=$MODPATH/system/lib64/$NAME
-  MODFILE=$MODPATH/system/vendor/lib64/$NAME2
-  rename_file
-fi
-if [ "$ABILIST32" ]; then
-  FILE=$MODPATH/system/lib/$NAME
-  MODFILE=$MODPATH/system/vendor/lib/$NAME2
-  rename_file
-fi
-if [ -f $MODPATH/system/vendor/lib64/$NAME2 ]\
-|| [ -f $MODPATH/system/vendor/lib/$NAME2 ]; then
+if grep -q libvndksupport.so /system/etc/*.txt; then
+  NAME=libhidlbase.so
+  NAME2=libhidldlbs.so
+  if [ "$IS64BIT" == true ]; then
+    FILE=$MODPATH/system/lib64/$NAME
+    MODFILE=$MODPATH/system/vendor/lib64/$NAME2
+    rename_file
+  fi
+  if [ "$ABILIST32" ]; then
+    FILE=$MODPATH/system/lib/$NAME
+    MODFILE=$MODPATH/system/vendor/lib/$NAME2
+    rename_file
+  fi
+  if [ -f $MODPATH/system/vendor/lib64/$NAME2 ]\
+  || [ -f $MODPATH/system/vendor/lib/$NAME2 ]; then
   FILE="$MODPATH/system/vendor/lib*/$NAME2
 $MODPATH/system/vendor/lib*/vendor.dolby.hardware.dms@2.0.so"
-  change_name
+    change_name
+  fi
 fi
 NAME=libstagefright_foundation.so
 NAME2=libstagefright_fdtn_dolby.so
