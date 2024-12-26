@@ -14,6 +14,7 @@
 - https://dumps.tadiphone.dev/dumps/sony/pdx237 sssi-user-14-67.1.A.2.229-1-release-keys
 - /lib64/soundfx/libswdap.so: https://github.com/XperiaLabs/vendor_sony_extra/tree/UDC/Sagami/audio
 - /lib/soundfx/libswdap.so modified by bbn
+- libsqlite.so: https://dumps.tadiphone.dev/dumps/zte/p855a01 msmnile-user-11-RKQ1.201221.002-20211215.223102-release-keys
 - libstagefright_foundation.so, libstagefrightdolby.so, libstagefright_soft_ddpdec.so, libstagefright_soft_ac4dec.so, libdeccfg.so, & media_codecs_dolby_audio.xml: https://dumps.tadiphone.dev/dumps/motorola/rhode user-12-S1SR32.38-124-3-a8403-release-keys
 - libhidlbase.so: CrDroid ROM Android 13
 - libmagiskpolicy.so: Kitsune Mask R6687BB53
