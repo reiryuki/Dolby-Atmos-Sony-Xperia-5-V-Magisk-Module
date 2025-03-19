@@ -180,6 +180,9 @@ fi
 
 # grant
 PKG=com.dolby.daxservice
+if [ "$API" -ge 31 ]; then
+  pm grant $PKG android.permission.BLUETOOTH_CONNECT
+fi
 if [ "$API" -ge 30 ]; then
   appops set $PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
 fi
