@@ -1022,8 +1022,10 @@ $MODPATH/system/vendor/lib*/libsqlite.so
 $MODPATH/system/vendor/lib*/soundfx/lib*wdap*.so
 $MODPATH/system/vendor/lib*/soundfx/libswvqe*.so
 $MODPATH/system/vendor/lib*/soundfx/libswgamedap*.so
+$MODPATH/system/vendor/lib*/soundfx/libdlbvol*.so
 $MODPATH/system/vendor/lib*/libdapparamstorage*.so
 $MODPATH/system/vendor/lib*/libdlbdsservice*.so
+$MODPATH/system/vendor/lib*/libdlbpreg*.so
 $MODPATH/system/vendor/bin/hw/vendor.dolby*.hardware.dms*@*-service
 $MODPATH/system/vendor/lib*/vendor.dolby*.hardware.dms*@*.so
 $MODPATH/system/vendor/lib*/vendor.dolby*.hardware.dms*@*-impl.so
