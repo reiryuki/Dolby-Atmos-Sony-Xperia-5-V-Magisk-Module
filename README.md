@@ -26,6 +26,7 @@
 ## Requirements
 - arm64-v8a architecture
 - Android 11 (SDK 30) and up
+- HIDL audio service
 - Magisk or Kitsune Mask or KernelSU or Apatch installed (Recommended to use Magisk Delta/Kitsune Mask for systemless early init mount manifest.xml if your ROM is Read-Only https://t.me/ryukinotes/49)
 
 ## WARNING!!!
