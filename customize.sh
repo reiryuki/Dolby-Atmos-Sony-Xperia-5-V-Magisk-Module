@@ -757,7 +757,8 @@ APPS="`ls $MODPATH/system/priv-app`
       `ls $MODPATH/system/app`"
 hide_oat
 APPS="$APPS MusicFX MotoDolbyV3 DaxUI OPSoundTuner
-      DolbyAtmos AudioEffectCenter MotoDolbyDax3"
+      DolbyAtmos AudioEffectCenter MotoDolbyDax3
+      LunarisDolby"
 hide_app
 
 # stream mode
