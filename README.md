@@ -22,6 +22,11 @@
 
 ## Changelog
 
+v2.0
+- Check functions in mirror /apex files instead of mirror /system if exist
+- Remove hardware services conflict restart (Use this instead: https://github.com/reiryuki/Hardware-Services-Restarter-Magisk-Module)
+- Fix sepolicy denial
+
 v1.9
 - Support NoMount metamodule
 - Resets module folders/files permissions at post-fs-data
@@ -60,10 +65,6 @@ v1.2
 v1.1
 - Fix script bug at installation for libsqlite.so detections
 
-v1.0
-- Fix BLUETOOTH_CONNECT permission
-- Fix selinux denials
-
 ## Screenshots
 https://t.me/ryukimodsscreenshots/7
 
@@ -82,12 +83,12 @@ Possibility of bootloop or even softbrick or a service failure on Read-Only ROM 
 - Reboot
 - If you are using KernelSU, you need to disable Unmount Modules by Default in KernelSU app settings and install https://github.com/KernelSU-Modules-Repo/meta-overlayfs or https://github.com/KernelSU-Modules-Repo/magic_mount_rs or https://github.com/KernelSU-Modules-Repo/hybrid_mount or https://github.com/maxsteeel/nomount first depending on ROM compatibility
 - If you have Dolby in-built in your ROM, then you need to activate data.cleanup=1 at the first time install (READ Optionals bellow!)
-- Install this module https://devuploads.com/8potp59x5231 via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
+- Install this module via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
 - Install AML Magisk Module https://t.me/ryukinotes/34 only if using any other else audio mod module
 - Reboot
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
 - If you are using SUList, you need to allow list manually your home launcher app (enable show system apps) and reboot afterwards
-- If you have sensors issue (fingerprint, proximity, gyroscope, etc), then READ Optionals bellow!
+- If you have vibrator, camera, charging/USB, SIM card/RIL, display, brightness, WiFi, thermal, and sensors issues (fingerprint, proximity, gyroscope, etc.), then install https://github.com/reiryuki/Hardware-Services-Restarter-Magisk-Module also
 
 ## Optionals
 - https://t.me/ryukinotes/8
@@ -112,7 +113,7 @@ Unsupported in some SDK 30 ROM or maybe it's just unsupported in SDK 30? I don't
 - https://t.me/androidryukimodsdiscussions
 - @HELLBOY017
 - @ahnet_h & bbn
-- You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
+- https://t.me/androidappsportdevelopment
 
 ## Sponsors
 https://t.me/ryukinotes/25
