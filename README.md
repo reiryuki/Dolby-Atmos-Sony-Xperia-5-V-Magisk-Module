@@ -30,7 +30,7 @@ https://t.me/ryukimodsscreenshots/7
 
 ## Download Links and Changelog
 
-v2.2 https://github.com/reiryuki/Dolby-Atmos-Sony-Xperia-5-V-Magisk-Module
+v2.2 https://move2link.co/5744d6e
 - Update libmagiskpolicy.so from Magisk (debug) 31.0 (31000)
 - Prepare /storage/emulated/"$UID"/Android/data/$PKG/ directories
 - Add a new optional dolby.mod_xml to let users to use any modified/custom dax-default.xml. Please read Optionals below.
