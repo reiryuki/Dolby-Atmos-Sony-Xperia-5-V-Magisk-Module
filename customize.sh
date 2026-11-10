@@ -338,7 +338,6 @@ if [ "`grep_prop mod.ui $OPTIONALS`" == 1 ]; then
   ui_print "- Using modified UI apk..."
   if [ -f $FILE ]; then
     cp -f $FILE $DIR
-    chmod 0644 $DIR/$APP.apk
     ui_print "  Applied"
   else
     ui_print "  ! There is no $FILE file."
@@ -850,6 +849,21 @@ fi
 
 # settings
 FILE=$MODPATH/system/vendor/etc/dolby/dax-default.xml
+if [ "`grep_prop dolby.mod_xml $OPTIONALS`" == 1 ]; then
+  MODFILE=/data/media/"$UID"/dax-default.xml
+  if [ -f $MODFILE ]; then
+    ui_print "- Copying"
+    ui_print "$MODFILE"
+    ui_print "  to"
+    ui_print "$FILE"
+    cp -f $MODFILE $FILE
+    ui_print " "
+  else
+    ui_print "! $MODFILE"
+    ui_print "  not found."
+    ui_print " "
+  fi
+fi
 PROP=`grep_prop dolby.bass $OPTIONALS`
 if [ "$PROP" == true ]; then
   ui_print "- Changing all bass-enhancer-enable value to true"
@@ -1232,11 +1246,16 @@ MODSYSTEM=/system
 # unmount
 unmount_mirror
 
-
-
-
-
-
+# prepare
+PKG=com.dolby.daxappui2
+DIR=/storage/emulated/"$UID"/Android/data/$PKG/files
+DIR2=/storage/emulated/"$UID"/Android/data/$PKG/cache
+ui_print "- Creating directories:"
+ui_print "  $DIR"
+mkdir -p $DIR
+ui_print "  $DIR2"
+mkdir -p $DIR2
+ui_print " "
 
 
 
